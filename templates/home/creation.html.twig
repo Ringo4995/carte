@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créateur de carte
+{% endblock %}
+
+{% block body %}
+	{{ form_start(formulaire) }}
+
+	{#  {{ form_widget(formulaire) }} #}
+	<div class="container">
+		<div class="form_group">
+			{{form_row(formulaire.Image,{"label":"Artwork de la carte : ", "attr":{"placeholder":"", "class":"form-control"}})}}
+		</div>
+		<div class="form_group">
+			{{form_row(formulaire.Titre,{"label":"Titre: ", "attr":{"placeholder":"Titre de la carte", "class":"form-control"}})}}
+		</div>
+		<div class="form_group">
+			{{form_row(formulaire.description,{"label":"Description: ", "attr":{"placeholder":"Description de la carte", "class":"form-control"}})}}
+		</div>
+		{{form_row(formulaire.envoyer,{"attr":{"class":"btn btn-info"}})}}
+	</div>
+	{{ form_end(formulaire) }}
+{% endblock %}

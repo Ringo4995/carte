@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	{% for row in cartes %}
+		<div class="card">
+			<img src="dossierCarte/{{row.Image}}" alt="pdp" style="width:100%">
+			<h1>{{row.Titre}}</h1>
+			<h1>{{row.description}}</h1>
+			<br>
+		</div>
+        <br>
+        <a href="{{path('pdfmaker', {'cardId': row.id})}}" class="" target="_blank"><button type="button" class="btn btn-outline-danger dell">Voir la carte en PDF</button></a>
+    
+	{% endfor %}
+{% endblock %}

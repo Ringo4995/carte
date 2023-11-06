@@ -1,0 +1,11 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+pdf_generate:
+    path: '/generate-pdf'
+    controller: 'App\Controller\HomeController::generatePdf'
+
+pdf_with_image:
+    path: /pdf/with-image
+    controller: App\Controller\PdfController::generatePdfWithImage
