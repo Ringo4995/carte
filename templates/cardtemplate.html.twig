@@ -11,9 +11,9 @@
         <!-- Your card content here -->
         {# <img src="{{ cartes.image }}" alt="Image de la carte"> #}
 
-        <img src='{{cartes.Image}}' alt="{{ cartes.Titre }}">
-        <p>{{ cartes.Titre }}</p>
-        <p>{{ cartes.description }}</p>
+        <img src='{{data.imageSrc}}' alt="{{ data.name }}">
+        <p>{{ data.name }}</p>
+        <p>{{ data.address }}</p>
         <!-- Include any other card-specific content -->
     </div>
 </body>
